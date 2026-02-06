@@ -1,0 +1,11 @@
+# Common ignores
+.DS_Store
+*.log
+.idea/
+.vscode/
+
+# Project sub-directories
+gamingstats-backend/target/
+gamingstats-frontend/dist/
+gamingstats-frontend/node_modules/
+gamingstats-frontend/.angular/

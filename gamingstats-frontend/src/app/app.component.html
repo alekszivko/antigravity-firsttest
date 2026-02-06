@@ -1,0 +1,23 @@
+<div class="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
+    <div class="glass p-8 rounded-2xl shadow-2xl max-w-md w-full text-center">
+        <h1 class="text-4xl font-bold mb-4 gradient-text">Gaming Stats</h1>
+
+        <div class="mt-6 p-4 rounded-xl"
+            [ngClass]="isHealthy ? 'bg-success-green/10 border border-success-green/20' : 'bg-error-red/10 border border-error-red/20'">
+            <p class="text-sm uppercase tracking-wider text-slate-400 mb-1">Backend Pipeline</p>
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-3 h-3 rounded-full animate-pulse"
+                    [ngClass]="isHealthy ? 'bg-success-green' : 'bg-error-red'"></div>
+                <span class="text-xl font-semibold" [ngClass]="isHealthy ? 'text-success-green' : 'text-error-red'">
+                    {{ backendStatus }}
+                </span>
+            </div>
+        </div>
+
+        <p class="mt-8 text-slate-400 text-sm">
+            Verified: Angular 19.2.0 • Quarkus 3.x • JWT • Tailwind
+        </p>
+    </div>
+</div>
+
+<router-outlet />
